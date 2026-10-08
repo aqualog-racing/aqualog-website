@@ -146,6 +146,36 @@ footer{padding:30px 0;background:white;border-top:1px solid var(--line)}
 @media print{header,footer,.skip,.actions,.policy-sidebar{display:none}body{background:white;color:black;font-size:11pt}.wrap{width:100%}main{padding:0}.hero{background:white!important;color:black;padding:0;display:block}.hero .lead,.hero-copy>p:not(.eyebrow):not(.lead),.hero h1 span{color:black}.hero-art{display:none}.page-intro{padding:0}.policy-layout{display:block}.policy{border:0;padding:0}.notice,.review-item{background:white}.policy section{break-inside:auto}h1{font-size:28pt}h2,h3{break-after:avoid}a{color:inherit}.features,.support-layout{display:block}.feature,.panel{break-inside:avoid}.contact-card{background:white!important;color:black}.contact-card p,.contact-card a,.contact-card .details,.contact-card .details strong{color:black}}
 
 @media(min-width:521px) and (max-width:680px){.header-row{flex-direction:column;align-items:flex-start;gap:14px;padding:18px 0 12px}.main-nav{width:100%}.main-nav a{flex:1;justify-content:center}}
+
+
+/* Full-height page: footer stays below content and at the bottom of short pages. */
+body{min-height:100vh;min-height:100svh;display:flex;flex-direction:column}
+body>main{flex:1 0 auto;width:100%}
+body>header,body>footer{flex-shrink:0}
+.support-layout{display:grid;grid-template-columns:1.15fr .85fr;gap:22px;align-items:stretch}
+.support-layout>.panel{margin:0}
+.support-layout .contact-card{grid-column:1/-1;display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:center;padding:28px 32px}
+.contact-card h2{font-size:28px;max-width:none;margin-bottom:10px}
+.contact-card .eyebrow{margin-bottom:12px}
+.contact-card .contact-copy>p:not(.eyebrow):not(.details){margin-bottom:10px;max-width:530px}
+.contact-card .details{padding-top:0;border-top:0;margin:0;font-size:13px}
+.contact-card .details strong{display:inline;font-size:13px;margin:0}
+.contact-actions{display:flex;flex-direction:column;align-items:flex-start;gap:12px;min-width:0}
+.contact-actions .contact-email{font-size:20px;margin:0;line-height:1.5;letter-spacing:-.4px}
+.contact-actions .button{margin:0}
+.support-layout .help-card,.support-layout .info-card{padding:28px 30px;display:flex;flex-direction:column}
+.support-layout .help-card h2,.support-layout .info-card h2{font-size:25px;margin-bottom:15px}
+.support-layout .help-card .eyebrow,.support-layout .info-card .eyebrow{margin-bottom:14px}
+.support-layout .help-card>p,.support-layout .info-card>p{font-size:15px}
+.support-layout .checklist{margin-bottom:18px}
+.support-layout .checklist li{padding:10px 0 10px 38px;font-size:14px}
+.support-layout .checklist li::before{top:12px}
+.support-layout .privacy-link{margin-top:auto;padding-top:16px;margin-bottom:0}
+.support-layout .help-card>.details{font-size:13px;margin-bottom:0}
+@media(max-width:900px){.contact-actions .contact-email{font-size:18px}.support-layout .contact-card{gap:20px}.support-layout .help-card,.support-layout .info-card{padding:26px}}
+@media(max-width:760px){.support-layout{grid-template-columns:1fr}.support-layout .contact-card{grid-template-columns:1fr;gap:20px;padding:28px}.contact-actions .contact-email{font-size:20px}.support-layout .privacy-link{margin-top:0}}
+@media(max-width:520px){.support-layout{gap:18px}.support-layout .contact-card,.support-layout .help-card,.support-layout .info-card{padding:24px}.contact-card h2{font-size:26px}.contact-actions .contact-email{font-size:18px}.support-layout .help-card h2,.support-layout .info-card h2{font-size:23px}}
+@media print{body{display:block;min-height:0}.support-layout{display:block}.support-layout>.panel{margin-bottom:20px}.support-layout .contact-card{display:block}.contact-actions{display:block}}
 </style>
 </head>
 <body>
@@ -183,7 +213,7 @@ footer{padding:30px 0;background:white;border-top:1px solid var(--line)}
 <section class="help-strip" aria-labelledby="help-title"><div><h2 id="help-title">Need help with Aqualog?</h2><p>Questions, technical issues or an idea for the app — get in touch.</p></div><a class="button primary" href="support.html">Contact support <span aria-hidden="true">↗</span></a></section>
 </div></main>
   <footer><div class="wrap footer-row">
-    <div class="footer-brand"><img src="aqualog-logo.png" alt="" width="1024" height="1024" loading="lazy"><div><strong>Aqualog</strong><span>Developed by Tino Hundić</span></div></div>
+    <div class="footer-brand"><img src="aqualog-logo.png" alt="" width="1024" height="1024" loading="lazy"><div><strong>Aqualog</strong><span>© 2026 Tino Hundić</span></div></div>
     <div class="footer-links"><a href="index.html">Home</a><a href="support.html">Support</a><a href="privacy.html">Privacy policy</a><a href="terms.html">Terms of Use</a></div>
   </div></footer>
 </body>
